@@ -1,5 +1,5 @@
 window.onload=function(){
-    var buttons = document.querySelector(".btn");
+    var buttons = document.querySelectorAll(".btn");
     for(let i=0;i<buttons.length;i++){
         buttons[i].addEventListener("click",function(event){
             compute(event.target);

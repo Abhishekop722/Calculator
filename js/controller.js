@@ -1,5 +1,5 @@
 window.onload=function(){
-    var buttons = document.getElementsByClassName("btn");
+    var buttons = document.querySelectorAll(".btn");
     for(let i=0;i<buttons.length;i++){
         buttons[i].addEventListener("click",function(event){
             compute(event.target);
@@ -12,7 +12,7 @@ function compute(target){
     
     if(!target.hasAttribute("id")){
         
-        temp += target.innerText;
+        temp = temp + target.innerText;
         if(document.querySelector("#textBox").value == logic.result){
             document.querySelector("#textBox").value = "";
         }
@@ -50,7 +50,7 @@ function compute(target){
         }
         else{
             temp = parseInt(temp);
-            temp -=temp*2;
+            temp = temp - temp*2;
             document.querySelector("#textBox").value = temp;
         }
     }
